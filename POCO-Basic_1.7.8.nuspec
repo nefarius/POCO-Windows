@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>poco-basic-windows-v140</id>
-        <version>1.7.8p2</version>
+        <version>1.7.8</version>
         <title>POCO C++ Libraries Basic Edition (MSVC 14.0)</title>
         <authors>Günter Obiltschnig, Aleksandar Fabijanic</authors>
         <owners>Günter Obiltschnig, Aleksandar Fabijanic</owners>
@@ -16,7 +16,7 @@
         <tags>c c++ native windows portable class libraries framework x86 x64 amd64</tags>
     </metadata>
     <files>
-        <file src="poco-basic.targets" target="build\native\poco-basic.targets" />
+        <file src="poco-basic.targets" target="build\native\poco-basic-windows-v140.targets" />
 
 		<!-- Foundation includes -->
 		<file src="poco-1.7.8p2\Foundation\include\Poco\AbstractCache.h" target="lib\native\include\Poco\AbstractCache.h" />
@@ -640,31 +640,31 @@
 		<file src="poco-1.7.8p2\lib64\PocoXMLmtd.lib" target="lib\native\lib64\PocoXMLmtd.lib" />
 
 		<!-- DLL files (x86) -->
-		<file src="poco-1.7.8p2\bin\CppUnit.dll" target="build\x86\CppUnit.dll" />
-		<file src="poco-1.7.8p2\bin\CppUnitd.dll" target="build\x86\CppUnitd.dll" />
-		<file src="poco-1.7.8p2\bin\PocoFoundation.dll" target="build\x86\PocoFoundation.dll" />
-		<file src="poco-1.7.8p2\bin\PocoFoundationd.dll" target="build\x86\PocoFoundationd.dll" />
-		<file src="poco-1.7.8p2\bin\PocoJSON.dll" target="build\x86\PocoJSON.dll" />
-		<file src="poco-1.7.8p2\bin\PocoJSONd.dll" target="build\x86\PocoJSONd.dll" />
-		<file src="poco-1.7.8p2\bin\PocoNet.dll" target="build\x86\PocoNet.dll" />
-		<file src="poco-1.7.8p2\bin\PocoNetd.dll" target="build\x86\PocoNetd.dll" />
-		<file src="poco-1.7.8p2\bin\PocoUtil.dll" target="build\x86\PocoUtil.dll" />
-		<file src="poco-1.7.8p2\bin\PocoUtild.dll" target="build\x86\PocoUtild.dll" />
-		<file src="poco-1.7.8p2\bin\PocoXML.dll" target="build\x86\PocoXML.dll" />
-		<file src="poco-1.7.8p2\bin\PocoXMLd.dll" target="build\x86\PocoXMLd.dll" />
+		<file src="poco-1.7.8p2\bin\CppUnit.dll" target="build\native\x86\CppUnit.dll" />
+		<file src="poco-1.7.8p2\bin\CppUnitd.dll" target="build\native\x86\CppUnitd.dll" />
+		<file src="poco-1.7.8p2\bin\PocoFoundation.dll" target="build\native\x86\PocoFoundation.dll" />
+		<file src="poco-1.7.8p2\bin\PocoFoundationd.dll" target="build\native\x86\PocoFoundationd.dll" />
+		<file src="poco-1.7.8p2\bin\PocoJSON.dll" target="build\native\x86\PocoJSON.dll" />
+		<file src="poco-1.7.8p2\bin\PocoJSONd.dll" target="build\native\x86\PocoJSONd.dll" />
+		<file src="poco-1.7.8p2\bin\PocoNet.dll" target="build\native\x86\PocoNet.dll" />
+		<file src="poco-1.7.8p2\bin\PocoNetd.dll" target="build\native\x86\PocoNetd.dll" />
+		<file src="poco-1.7.8p2\bin\PocoUtil.dll" target="build\native\x86\PocoUtil.dll" />
+		<file src="poco-1.7.8p2\bin\PocoUtild.dll" target="build\native\x86\PocoUtild.dll" />
+		<file src="poco-1.7.8p2\bin\PocoXML.dll" target="build\native\x86\PocoXML.dll" />
+		<file src="poco-1.7.8p2\bin\PocoXMLd.dll" target="build\native\x86\PocoXMLd.dll" />
 		
 		<!-- DLL files (x64) -->
-		<file src="poco-1.7.8p2\bin64\CppUnit64.dll" target="build\x64\CppUnit64.dll" />
-		<file src="poco-1.7.8p2\bin64\CppUnit64d.dll" target="build\x64\CppUnit64d.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoFoundation64.dll" target="build\x64\PocoFoundation64.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoFoundation64d.dll" target="build\x64\PocoFoundation64d.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoJSON64.dll" target="build\x64\PocoJSON64.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoJSON64d.dll" target="build\x64\PocoJSON64d.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoNet64.dll" target="build\x64\PocoNet64.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoNet64d.dll" target="build\x64\PocoNet64d.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoUtil64.dll" target="build\x64\PocoUtil64.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoUtil64d.dll" target="build\x64\PocoUtil64d.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoXML64.dll" target="build\x64\PocoXML64.dll" />
-		<file src="poco-1.7.8p2\bin64\PocoXML64d.dll" target="build\x64\PocoXML64d.dll" />
+		<file src="poco-1.7.8p2\bin64\CppUnit64.dll" target="build\native\x64\CppUnit64.dll" />
+		<file src="poco-1.7.8p2\bin64\CppUnit64d.dll" target="build\native\x64\CppUnit64d.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoFoundation64.dll" target="build\native\x64\PocoFoundation64.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoFoundation64d.dll" target="build\native\x64\PocoFoundation64d.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoJSON64.dll" target="build\native\x64\PocoJSON64.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoJSON64d.dll" target="build\native\x64\PocoJSON64d.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoNet64.dll" target="build\native\x64\PocoNet64.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoNet64d.dll" target="build\native\x64\PocoNet64d.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoUtil64.dll" target="build\native\x64\PocoUtil64.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoUtil64d.dll" target="build\native\x64\PocoUtil64d.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoXML64.dll" target="build\native\x64\PocoXML64.dll" />
+		<file src="poco-1.7.8p2\bin64\PocoXML64d.dll" target="build\native\x64\PocoXML64d.dll" />
     </files>
 </package>
