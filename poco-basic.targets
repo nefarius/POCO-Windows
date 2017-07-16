@@ -7,9 +7,9 @@
 		</ClCompile>
 	</ItemDefinitionGroup>
 
-	<!-- Gets invoked before linker runs -->
-	<Target Name="SetupLibPath" BeforeTargets="Link">
-
+	<!-- Copies dynamic libraries to output directory on shared runtime builds -->
+	<Target Name="CopyDynamicLibraries" AfterTargets="AfterBuild">
+	
 		<!-- Check if the runtime link is dynamic or static -->
 		<CreateProperty Value="%(ClCompile.RuntimeLibrary)">
 			<Output TaskParameter="Value" PropertyName="POCO_RuntimeLibrary" />
@@ -29,37 +29,6 @@
 			<Output TaskParameter="Value" PropertyName="POCO_RuntimeLink" />
 		</CreateProperty>
 
-		<!-- POCO_ToolSet is toolset except for "_xp" suffix. -->
-		<CreateProperty Condition="$(PlatformToolset.ToLower().IndexOf('v90')) == 0" Value="v90">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower().IndexOf('v100')) == 0" Value="v100">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower().IndexOf('v110')) == 0" Value="v110">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower().IndexOf('v120')) == 0" Value="v120">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower().IndexOf('v140')) == 0" Value="v140">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower().IndexOf('v141')) == 0" Value="v141">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-
-		<!-- Special Cases: Windows Driver Kit -->
-		<CreateProperty Condition="$(PlatformToolset.ToLower()) == 'windowsapplicationfordrivers8.0'" Value="v110">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower()) == 'windowsapplicationfordrivers8.1'" Value="v120">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-		<CreateProperty Condition="$(PlatformToolset.ToLower()) == 'windowsapplicationfordrivers10.0'" Value="v140">
-			<Output TaskParameter="Value" PropertyName="POCO_ToolSet" />
-		</CreateProperty>
-
 		<!-- POCO_Platform is CPU architecture. "x86" or "x64". -->
 		<CreateProperty Condition="$(Platform.ToLower()) == 'win32'" Value="x86">
 			<Output TaskParameter="Value" PropertyName="POCO_Platform" />
@@ -68,9 +37,33 @@
 			<Output TaskParameter="Value" PropertyName="POCO_Platform" />
 		</CreateProperty>
 
-		<!-- Suffix of lib file like 'x86-v100-mdd' -->
-		<CreateProperty Value="$(POCO_Platform)-$(POCO_ToolSet)-$(POCO_RuntimeLink)">
-			<Output TaskParameter="Value" PropertyName="POCO_LibSuffix" />
+		<!-- POCO_DynamicLibPath is set according to CPU architecture -->
+		<CreateProperty Condition="$(POCO_Platform) == 'x86'" Value="$(MSBuildThisFileDirectory)..\..\build\native\x86">
+			<Output TaskParameter="Value" PropertyName="POCO_DynamicLibPath" />
+		</CreateProperty>
+		<CreateProperty Condition="$(POCO_Platform) == 'x64'" Value="$(MSBuildThisFileDirectory)..\..\build\native\x64">
+			<Output TaskParameter="Value" PropertyName="POCO_DynamicLibPath" />
+		</CreateProperty>
+
+		<!-- Get list of DLL files -->
+		<ItemGroup>
+			<DynamicLibs Include="$(POCO_DynamicLibPath)\*.dll" />
+		</ItemGroup>
+
+		<!-- Copy dynamic libraries to output folder -->
+		<Copy Condition="($(POCO_RuntimeLink) == 'mdd') Or ($(POCO_RuntimeLink) == 'md')" SourceFiles="@(DynamicLibs)" DestinationFolder="$(OutDir)" />
+
+	</Target>
+
+	<!-- Gets invoked before linker runs -->
+	<Target Name="SetupLibPath" BeforeTargets="Link">
+	
+		<!-- POCO_Platform is CPU architecture. "x86" or "x64". -->
+		<CreateProperty Condition="$(Platform.ToLower()) == 'win32'" Value="x86">
+			<Output TaskParameter="Value" PropertyName="POCO_Platform" />
+		</CreateProperty>
+		<CreateProperty Condition="$(Platform.ToLower()) == 'x64'" Value="x64">
+			<Output TaskParameter="Value" PropertyName="POCO_Platform" />
 		</CreateProperty>
 
 		<!-- POCO_LibPath is set according to CPU architecture -->
