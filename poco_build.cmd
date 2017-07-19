@@ -27,6 +27,10 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86
 call buildwin 140 build shared both Win32 nosamples
 call buildwin 140 build static_mt both Win32 nosamples
 
+rem Build NuGet package
+cd ..
+call nuget pack POCO-Basic.nuspec -NoPackageAnalysis -NonInteractive
+
 popd
 endlocal
 pause
