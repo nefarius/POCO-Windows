@@ -1,7 +1,7 @@
 @echo off
 
 set MYSELF=%~dp0
-set POCO=%MYSELF%\poco-1.7.8p2
+set POCO=%MYSELF%\poco
 
 cd "%POCO%"
 
@@ -9,6 +9,8 @@ IF NOT EXIST "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.b
 	echo "Microsoft Visual Studio 2015 not found in default installation dir, can't continue"
 	exit /B -1
 )
+
+copy /Y ..\components.txt components
 
 rem Build x64
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
