@@ -1,5 +1,3 @@
-CppUnit
-CppUnit/WinTestRunner
 Foundation
 XML
 JSON
