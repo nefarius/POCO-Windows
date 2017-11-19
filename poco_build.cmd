@@ -1,7 +1,8 @@
 @echo off
 @setlocal
 
-pushd "%~dp0"
+set MYDIR=%~dp0
+pushd "%MYDIR%"
 
 IF NOT EXIST "poco" (
     echo poco folder not found, did you forget to clone?
@@ -14,7 +15,7 @@ copy /Y components.txt poco\components
 rem Build x64
 IF EXIST "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat" (
     call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
-    cd poco
+    cd "%MYDIR%\poco"
     call buildwin 150 build shared both x64 nosamples
     call buildwin 150 build static_mt both x64 nosamples
 )
@@ -22,7 +23,7 @@ IF EXIST "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxil
 rem Build x86
 IF EXIST "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat" (
     call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
-    cd poco
+    cd "%MYDIR%\poco"
     call buildwin 150 build shared both Win32 nosamples
     call buildwin 150 build static_mt both Win32 nosamples
 )
