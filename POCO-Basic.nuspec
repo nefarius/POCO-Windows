@@ -19,6 +19,64 @@
         <file src="poco-basic.targets" target="build\native\poco-basic-windows-v150.targets" />
 
         <!-- Include files -->
+        <file src="poco\Data\include\Poco\Data\AbstractBinder.h" target="lib\native\include\Poco\Data\AbstractBinder.h" />
+        <file src="poco\Data\include\Poco\Data\AbstractBinding.h" target="lib\native\include\Poco\Data\AbstractBinding.h" />
+        <file src="poco\Data\include\Poco\Data\AbstractExtraction.h" target="lib\native\include\Poco\Data\AbstractExtraction.h" />
+        <file src="poco\Data\include\Poco\Data\AbstractExtractor.h" target="lib\native\include\Poco\Data\AbstractExtractor.h" />
+        <file src="poco\Data\include\Poco\Data\AbstractPreparation.h" target="lib\native\include\Poco\Data\AbstractPreparation.h" />
+        <file src="poco\Data\include\Poco\Data\AbstractPreparator.h" target="lib\native\include\Poco\Data\AbstractPreparator.h" />
+        <file src="poco\Data\include\Poco\Data\AbstractSessionImpl.h" target="lib\native\include\Poco\Data\AbstractSessionImpl.h" />
+        <file src="poco\Data\include\Poco\Data\ArchiveStrategy.h" target="lib\native\include\Poco\Data\ArchiveStrategy.h" />
+        <file src="poco\Data\include\Poco\Data\AutoTransaction.h" target="lib\native\include\Poco\Data\AutoTransaction.h" />
+        <file src="poco\Data\include\Poco\Data\Binding.h" target="lib\native\include\Poco\Data\Binding.h" />
+        <file src="poco\Data\include\Poco\Data\Bulk.h" target="lib\native\include\Poco\Data\Bulk.h" />
+        <file src="poco\Data\include\Poco\Data\BulkBinding.h" target="lib\native\include\Poco\Data\BulkBinding.h" />
+        <file src="poco\Data\include\Poco\Data\BulkExtraction.h" target="lib\native\include\Poco\Data\BulkExtraction.h" />
+        <file src="poco\Data\include\Poco\Data\Column.h" target="lib\native\include\Poco\Data\Column.h" />
+        <file src="poco\Data\include\Poco\Data\Connector.h" target="lib\native\include\Poco\Data\Connector.h" />
+        <file src="poco\Data\include\Poco\Data\Constants.h" target="lib\native\include\Poco\Data\Constants.h" />
+        <file src="poco\Data\include\Poco\Data\Data.h" target="lib\native\include\Poco\Data\Data.h" />
+        <file src="poco\Data\include\Poco\Data\DataException.h" target="lib\native\include\Poco\Data\DataException.h" />
+        <file src="poco\Data\include\Poco\Data\Date.h" target="lib\native\include\Poco\Data\Date.h" />
+        <file src="poco\Data\include\Poco\Data\DynamicDateTime.h" target="lib\native\include\Poco\Data\DynamicDateTime.h" />
+        <file src="poco\Data\include\Poco\Data\DynamicLOB.h" target="lib\native\include\Poco\Data\DynamicLOB.h" />
+        <file src="poco\Data\include\Poco\Data\Extraction.h" target="lib\native\include\Poco\Data\Extraction.h" />
+        <file src="poco\Data\include\Poco\Data\Limit.h" target="lib\native\include\Poco\Data\Limit.h" />
+        <file src="poco\Data\include\Poco\Data\LOB.h" target="lib\native\include\Poco\Data\LOB.h" />
+        <file src="poco\Data\include\Poco\Data\LOBStream.h" target="lib\native\include\Poco\Data\LOBStream.h" />
+        <file src="poco\Data\include\Poco\Data\MetaColumn.h" target="lib\native\include\Poco\Data\MetaColumn.h" />
+        <file src="poco\Data\include\Poco\Data\PooledSessionHolder.h" target="lib\native\include\Poco\Data\PooledSessionHolder.h" />
+        <file src="poco\Data\include\Poco\Data\PooledSessionImpl.h" target="lib\native\include\Poco\Data\PooledSessionImpl.h" />
+        <file src="poco\Data\include\Poco\Data\Position.h" target="lib\native\include\Poco\Data\Position.h" />
+        <file src="poco\Data\include\Poco\Data\Preparation.h" target="lib\native\include\Poco\Data\Preparation.h" />
+        <file src="poco\Data\include\Poco\Data\Range.h" target="lib\native\include\Poco\Data\Range.h" />
+        <file src="poco\Data\include\Poco\Data\RecordSet.h" target="lib\native\include\Poco\Data\RecordSet.h" />
+        <file src="poco\Data\include\Poco\Data\Row.h" target="lib\native\include\Poco\Data\Row.h" />
+        <file src="poco\Data\include\Poco\Data\RowFilter.h" target="lib\native\include\Poco\Data\RowFilter.h" />
+        <file src="poco\Data\include\Poco\Data\RowFormatter.h" target="lib\native\include\Poco\Data\RowFormatter.h" />
+        <file src="poco\Data\include\Poco\Data\RowIterator.h" target="lib\native\include\Poco\Data\RowIterator.h" />
+        <file src="poco\Data\include\Poco\Data\Session.h" target="lib\native\include\Poco\Data\Session.h" />
+        <file src="poco\Data\include\Poco\Data\SessionFactory.h" target="lib\native\include\Poco\Data\SessionFactory.h" />
+        <file src="poco\Data\include\Poco\Data\SessionImpl.h" target="lib\native\include\Poco\Data\SessionImpl.h" />
+        <file src="poco\Data\include\Poco\Data\SessionPool.h" target="lib\native\include\Poco\Data\SessionPool.h" />
+        <file src="poco\Data\include\Poco\Data\SessionPoolContainer.h" target="lib\native\include\Poco\Data\SessionPoolContainer.h" />
+        <file src="poco\Data\include\Poco\Data\SimpleRowFormatter.h" target="lib\native\include\Poco\Data\SimpleRowFormatter.h" />
+        <file src="poco\Data\include\Poco\Data\SQLChannel.h" target="lib\native\include\Poco\Data\SQLChannel.h" />
+        <file src="poco\Data\include\Poco\Data\Statement.h" target="lib\native\include\Poco\Data\Statement.h" />
+        <file src="poco\Data\include\Poco\Data\StatementCreator.h" target="lib\native\include\Poco\Data\StatementCreator.h" />
+        <file src="poco\Data\include\Poco\Data\StatementImpl.h" target="lib\native\include\Poco\Data\StatementImpl.h" />
+        <file src="poco\Data\include\Poco\Data\Time.h" target="lib\native\include\Poco\Data\Time.h" />
+        <file src="poco\Data\include\Poco\Data\Transaction.h" target="lib\native\include\Poco\Data\Transaction.h" />
+        <file src="poco\Data\include\Poco\Data\TypeHandler.h" target="lib\native\include\Poco\Data\TypeHandler.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\Binder.h" target="lib\native\include\Poco\Data\SQLite\Binder.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\Connector.h" target="lib\native\include\Poco\Data\SQLite\Connector.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\Extractor.h" target="lib\native\include\Poco\Data\SQLite\Extractor.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\Notifier.h" target="lib\native\include\Poco\Data\SQLite\Notifier.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\SessionImpl.h" target="lib\native\include\Poco\Data\SQLite\SessionImpl.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\SQLite.h" target="lib\native\include\Poco\Data\SQLite\SQLite.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\SQLiteException.h" target="lib\native\include\Poco\Data\SQLite\SQLiteException.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\SQLiteStatementImpl.h" target="lib\native\include\Poco\Data\SQLite\SQLiteStatementImpl.h" />
+        <file src="poco\Data\SQLite\include\Poco\Data\SQLite\Utility.h" target="lib\native\include\Poco\Data\SQLite\Utility.h" />
         <file src="poco\Foundation\include\Poco\AbstractCache.h" target="lib\native\include\Poco\AbstractCache.h" />
         <file src="poco\Foundation\include\Poco\AbstractDelegate.h" target="lib\native\include\Poco\AbstractDelegate.h" />
         <file src="poco\Foundation\include\Poco\AbstractEvent.h" target="lib\native\include\Poco\AbstractEvent.h" />
@@ -579,6 +637,14 @@
 
 
         <!-- Shared & Static lib files (x86) -->
+        <file src="poco\lib\PocoData.lib" target="lib\native\lib\PocoData.lib" />
+        <file src="poco\lib\PocoDatad.lib" target="lib\native\lib\PocoDatad.lib" />
+        <file src="poco\lib\PocoDatamt.lib" target="lib\native\lib\PocoDatamt.lib" />
+        <file src="poco\lib\PocoDatamtd.lib" target="lib\native\lib\PocoDatamtd.lib" />
+        <file src="poco\lib\PocoDataSQLite.lib" target="lib\native\lib\PocoDataSQLite.lib" />
+        <file src="poco\lib\PocoDataSQLited.lib" target="lib\native\lib\PocoDataSQLited.lib" />
+        <file src="poco\lib\PocoDataSQLitemt.lib" target="lib\native\lib\PocoDataSQLitemt.lib" />
+        <file src="poco\lib\PocoDataSQLitemtd.lib" target="lib\native\lib\PocoDataSQLitemtd.lib" />
         <file src="poco\lib\PocoFoundation.lib" target="lib\native\lib\PocoFoundation.lib" />
         <file src="poco\lib\PocoFoundationd.lib" target="lib\native\lib\PocoFoundationd.lib" />
         <file src="poco\lib\PocoFoundationmt.lib" target="lib\native\lib\PocoFoundationmt.lib" />
@@ -601,6 +667,14 @@
         <file src="poco\lib\PocoXMLmtd.lib" target="lib\native\lib\PocoXMLmtd.lib" />
 
         <!-- Shared & Static lib files (x64) -->
+        <file src="poco\lib64\PocoData.lib" target="lib\native\lib64\PocoData.lib" />
+        <file src="poco\lib64\PocoDatad.lib" target="lib\native\lib64\PocoDatad.lib" />
+        <file src="poco\lib64\PocoDatamt.lib" target="lib\native\lib64\PocoDatamt.lib" />
+        <file src="poco\lib64\PocoDatamtd.lib" target="lib\native\lib64\PocoDatamtd.lib" />       
+        <file src="poco\lib64\PocoDataSQLite.lib" target="lib\native\lib64\PocoDataSQLite.lib" />
+        <file src="poco\lib64\PocoDataSQLited.lib" target="lib\native\lib64\PocoDataSQLited.lib" />
+        <file src="poco\lib64\PocoDataSQLitemt.lib" target="lib\native\lib64\PocoDataSQLitemt.lib" />
+        <file src="poco\lib64\PocoDataSQLitemtd.lib" target="lib\native\lib64\PocoDataSQLitemtd.lib" />
         <file src="poco\lib64\PocoFoundation.lib" target="lib\native\lib64\PocoFoundation.lib" />
         <file src="poco\lib64\PocoFoundationd.lib" target="lib\native\lib64\PocoFoundationd.lib" />
         <file src="poco\lib64\PocoFoundationmt.lib" target="lib\native\lib64\PocoFoundationmt.lib" />
@@ -623,6 +697,10 @@
         <file src="poco\lib64\PocoXMLmtd.lib" target="lib\native\lib64\PocoXMLmtd.lib" />
 
         <!-- DLL files (x86) -->
+        <file src="poco\bin\PocoData.dll" target="build\native\x86\PocoData.dll" />
+        <file src="poco\bin\PocoDatad.dll" target="build\native\x86\PocoDatad.dll" />
+        <file src="poco\bin\PocoDataSQLite.dll" target="build\native\x86\PocoDataSQLite.dll" />
+        <file src="poco\bin\PocoDataSQLited.dll" target="build\native\x86\PocoDataSQLited.dll" />
         <file src="poco\bin\PocoFoundation.dll" target="build\native\x86\PocoFoundation.dll" />
         <file src="poco\bin\PocoFoundationd.dll" target="build\native\x86\PocoFoundationd.dll" />
         <file src="poco\bin\PocoJSON.dll" target="build\native\x86\PocoJSON.dll" />
@@ -635,6 +713,10 @@
         <file src="poco\bin\PocoXMLd.dll" target="build\native\x86\PocoXMLd.dll" />
 
         <!-- DLL files (x64) -->
+        <file src="poco\bin64\PocoData64.dll" target="build\native\x64\PocoData64.dll" />
+        <file src="poco\bin64\PocoData64d.dll" target="build\native\x64\PocoData64d.dll" />
+        <file src="poco\bin64\PocoDataSQLite64.dll" target="build\native\x64\PocoDataSQLite64.dll" />
+        <file src="poco\bin64\PocoDataSQLite64d.dll" target="build\native\x64\PocoDataSQLite64d.dll" />
         <file src="poco\bin64\PocoFoundation64.dll" target="build\native\x64\PocoFoundation64.dll" />
         <file src="poco\bin64\PocoFoundation64d.dll" target="build\native\x64\PocoFoundation64d.dll" />
         <file src="poco\bin64\PocoJSON64.dll" target="build\native\x64\PocoJSON64.dll" />
