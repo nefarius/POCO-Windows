@@ -14,5 +14,5 @@ function Get-XmlNodes()
     $sub = [regex]"poco\\[a-zA-Z]*\\(include\\.*\.h$)"
     $template = "<file src=`"{0}`" target=`"lib\native\{1}`" />"
    
-    Get-IncludeFiles | Select-Object { $template -f $_.FullName, $sub.Match($_.FullName).Groups[1].Value }
+    Get-IncludeFiles | ForEach-Object { $template -f $_.FullName, $sub.Match($_.FullName).Groups[1].Value }
 }
