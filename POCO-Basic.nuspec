@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>poco-basic-windows-v150</id>
+        <id>nefarius.poco-basic-windows-v150</id>
         <version>1.8.1</version>
         <title>POCO C++ Libraries Basic Edition (MSVC 15.0)</title>
         <authors>Günter Obiltschnig, Aleksandar Fabijanic</authors>
@@ -16,7 +16,7 @@
         <tags>c c++ native windows portable class libraries framework x86 x64 amd64</tags>
     </metadata>
     <files>
-        <file src="poco-basic.targets" target="build\native\poco-basic-windows-v150.targets" />
+        <file src="poco-basic.targets" target="build\native\nefarius.poco-basic-windows-v150.targets" />
 
         <!-- Include files -->
         <file src="poco\Data\include\Poco\Data\AbstractBinder.h" target="lib\native\include\Poco\Data\AbstractBinder.h" />
