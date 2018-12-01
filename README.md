@@ -1,4 +1,11 @@
 # POCO-Windows
+
+---
+
+**Deprecated!** I've switched over to [Vcpkg](https://github.com/Microsoft/vcpkg) and will no longer maintain this repository 😊
+
+---
+
 Inspired by [grpc-windows](https://github.com/plasticbox/grpc-windows) this repository provides fully automated build scripts for the [POCO C++ libraries](https://pocoproject.org/) on Windows. While building POCO on Windows by itself is pretty straightforward I missed the convenience of having a [NuGet](https://www.nuget.org/) package available which abstracts away the hassle of setting up your projects compiler and linker settings accordingly. This is the sole purpose of this repository: transform POCO Basic into a NuGet package!
 
 ## Requirements
